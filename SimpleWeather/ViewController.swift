@@ -13,6 +13,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var mainScreenBackground: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
@@ -20,6 +21,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
+
+
     
     let gradientLayer = CAGradientLayer()
     
@@ -35,6 +38,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        backgroundView.layer.addSublayer(gradientLayer)
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+            case 3...11:
+                mainScreenBackground.image = UIImage(named: "backgroundEarlyMorning")
+            case 12...17:
+                mainScreenBackground.image = UIImage(named: "backgroundAfterNoon")
+            default:
+                mainScreenBackground.image = UIImage(named: "backgroundEvening")
+        }
         
         
         let indicatorSize: CGFloat = 70

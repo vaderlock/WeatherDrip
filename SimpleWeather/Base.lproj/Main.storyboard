@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAfterNoon" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-4Z-IRJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundEarlyMorning" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-4Z-IRJ">
                                 <rect key="frame" x="-10" y="0.0" width="411" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -70,6 +70,7 @@
                         <outlet property="conditionLabel" destination="e5N-20-Ruo" id="VNt-24-Ch0"/>
                         <outlet property="dayLabel" destination="0th-qW-KPS" id="3Fq-me-MnS"/>
                         <outlet property="locationLabel" destination="BHI-5Y-c37" id="hTn-VP-uGI"/>
+                        <outlet property="mainScreenBackground" destination="uJf-4Z-IRJ" id="vw8-0B-TZo"/>
                         <outlet property="temperatureLabel" destination="2XJ-B3-nfW" id="987-kU-IXJ"/>
                     </connections>
                 </viewController>
@@ -79,7 +80,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundAfterNoon" width="4689" height="10151"/>
+        <image name="backgroundEarlyMorning" width="4688" height="10151"/>
         <image name="cloudy" width="512" height="512"/>
     </resources>
 </document>
