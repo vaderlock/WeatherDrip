@@ -91,6 +91,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             self.locationManager.stopUpdatingLocation()
         }
+    
+    func displayClothes(){
+        
+    }
 
 
 
