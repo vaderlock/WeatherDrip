@@ -30,6 +30,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        backgroundView.layer.addSublayer(gradientLayer)
@@ -92,9 +94,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
         }
     
-    func displayClothes(){
-        
-    }
 
 
 
@@ -111,8 +110,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             gradientLayer.frame = view.bounds
             gradientLayer.colors = [topColor, bottomColor]
         }
-
     
 
+    
+    
 }
 
