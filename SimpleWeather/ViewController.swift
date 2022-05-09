@@ -26,11 +26,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var bottomClothing: UIImageView!
     @IBOutlet weak var footwearClothing: UIImageView!
     
-    
-    
-    
-    
-    
     let gradientLayer = CAGradientLayer()
     
     let apiKey = "06507f55fe059590bdb7199e133e894c"
@@ -135,44 +130,68 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     switch clothes{
                         case 10..<40: //temperature ranges
                             switch weatherCondition{
-                                case "Rain", "Drizzle", "Thunderstorm":
-                                print("") //replace with UI display
-                                case "Snow":
-                                print("")//replace with UI display
-                                default:
-                                print("")//replace with UI display
+                                
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                                
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                                
+                            default:
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                             }
                         case 40..<50: //temperature ranges
                             switch weatherCondition{
-                                case "Rain", "Drizzle", "Thunderstorm":
-                                print("") //replace with UI display
-                                case "Snow":
+                           
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            default:
                                 print("")//replace with UI display
-                                default:
-                                print("")//replace with UI display
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                             }
                         case 50..<60: //temperature ranges
                             switch weatherCondition{
-                                case "Rain", "Drizzle", "Thunderstorm":
-                                print("It is raining") //replace with UI display
-                                case "Snow":
-                                print("it is snowing")//replace with UI display
-                                default:
-                                print("It works")//replace with UI display
+                                
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            default:
+                                self.topClothing.image = UIImage(named: "hoodie" )
+                                self.bottomClothing.image = UIImage(named: "jeans")
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                             }
 
                         case 60..<70:
                             switch weatherCondition{
-                                case "Rain", "Drizzle", "Thunderstorm":
-                                print("")//replace with UI display
-                                case "Snow":
-                                print("")//replace with UI display
-                                case "Clouds":
-                                print("It def works")
-                                self.topClothing.image = UIImage(named: "hoodie" )
-                                self.bottomClothing.image = UIImage(named: "jeans")
-                                self.footwearClothing.image = UIImage(named: "sneakers")
-                                default:
+                               
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            default:
                                 self.topClothing.image = UIImage(named: "hoodie" )
                                 self.bottomClothing.image = UIImage(named: "jeans")
                                 self.footwearClothing.image = UIImage(named: "sneakers")
@@ -182,21 +201,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
                         case 70..<80:
                             switch weatherCondition{
-                                    case "Rain", "Drizzle", "Thunderstorm":
-                                    print("")//replace with UI display
-                                    case "Snow":
-                                    print("")//replace with UI display
-                                    default:
-                                    print("")//replace with UI display
+                                
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            default:
+                                self.topClothing.image = UIImage(named: "collared_shirt")
+                                self.bottomClothing.image = UIImage(named: "short")
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                                 }
+                        
                         case 80..<100:
                             switch weatherCondition{
-                                    case "Rain", "Drizzle", "Thunderstorm":
-                                    print("")//replace with UI display
-                                    case "Snow":
-                                    print("")//replace with UI display
-                                    default:
-                                    print("")//replace with UI display
+                                
+                            case "Rain", "Drizzle", "Thunderstorm":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            case "Snow":
+                                self.topClothing.image = UIImage(named: "jacket")
+                                self.bottomClothing.image = UIImage(named: "jeans" )
+                                self.footwearClothing.image = UIImage(named: "boots")
+                            default:
+                                self.topClothing.image = UIImage(named: "tanktop")
+                                self.bottomClothing.image = UIImage(named: "short")
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                                 }
                         
                         default:
