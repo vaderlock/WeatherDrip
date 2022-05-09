@@ -14,6 +14,8 @@
 		CAAC37FC2826D89D00507C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAC37FA2826D89D00507C1F /* Main.storyboard */; };
 		CAAC37FE2826D8A000507C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAC37FD2826D8A000507C1F /* Assets.xcassets */; };
 		CAAC38012826D8A000507C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAC37FF2826D8A000507C1F /* LaunchScreen.storyboard */; };
+		CAB25CBA2829637C00E7E92C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB25CB92829637C00E7E92C /* WeatherData.swift */; };
+		CAFE214428288A1800B945EE /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE214328288A1800B945EE /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CAAC37FD2826D8A000507C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAAC38002826D8A000507C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAAC38022826D8A000507C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB25CB92829637C00E7E92C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		CAFE214328288A1800B945EE /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		F6251B28E58AC667DA4BA060 /* Pods-SimpleWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleWeather.debug.xcconfig"; path = "Target Support Files/Pods-SimpleWeather/Pods-SimpleWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,8 @@
 				CAAC37F42826D89D00507C1F /* AppDelegate.swift */,
 				CAAC37F62826D89D00507C1F /* SceneDelegate.swift */,
 				CAAC37F82826D89D00507C1F /* ViewController.swift */,
+				CAFE214328288A1800B945EE /* WeatherManager.swift */,
+				CAB25CB92829637C00E7E92C /* WeatherData.swift */,
 				CAAC37FA2826D89D00507C1F /* Main.storyboard */,
 				CAAC37FD2826D8A000507C1F /* Assets.xcassets */,
 				CAAC37FF2826D8A000507C1F /* LaunchScreen.storyboard */,
@@ -207,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAAC37F92826D89D00507C1F /* ViewController.swift in Sources */,
+				CAB25CBA2829637C00E7E92C /* WeatherData.swift in Sources */,
 				CAAC37F52826D89D00507C1F /* AppDelegate.swift in Sources */,
+				CAFE214428288A1800B945EE /* WeatherManager.swift in Sources */,
 				CAAC37F72826D89D00507C1F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

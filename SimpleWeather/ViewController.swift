@@ -31,6 +31,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var lon = 74.0060
     var activityIndicator:  NVActivityIndicatorView!
     let locationManager = CLLocationManager()
+    var clothes: Int = 0
     
     
     
@@ -38,15 +39,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        backgroundView.layer.addSublayer(gradientLayer)
+        
+        func parseJSON(weatherData: Data){
+            let decoder = JSONDecoder()
+            do{
+                let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
+                print(decodedData.main.temp)
+            } catch{
+                print(error)
+            }
+        }
+        
+        
         let hour = Calendar.current.component(.hour, from: Date())
         
         switch hour {
             case 3...11:
-                mainScreenBackground.image = UIImage(named: "backgroundEarlyMorning")
+                mainScreenBackground.image = UIImage(named: "after_noon")
             case 12...17:
-                mainScreenBackground.image = UIImage(named: "backgroundAfterNoon")
+                mainScreenBackground.image = UIImage(named: "after_noon")
             default:
-                mainScreenBackground.image = UIImage(named: "backgroundEvening")
+                mainScreenBackground.image = UIImage(named: "night")
         }
         
         
@@ -68,9 +81,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setBlueGradientBackground()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        setBlueGradientBackground()
+//    }
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -96,12 +109,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     dateFormatter.dateFormat = "EEEE"
                     self.dayLabel.text = dateFormatter.string(from: date)
                     
-                    let suffix = iconName.suffix(1)
-                    if(suffix == "n"){
-                        self.setGreyGradientBackground()
-                    }else{
-                        self.setBlueGradientBackground()
-                    }
+                    //prints out the lat and lon of user location
+//                    print(self.lat)
+//                    print(self.lon)
+//                    print("Curren temperature: \(jsonTemp["temp"])")
+                    
+//                    if (jsonTemp["temp"]) <= 90 {
+//                        print("Sweater")
+//                    } else {
+//                        print("Jacket")
+//                    }
+                    
+                    let clothes = (Int(round(jsonTemp["temp"].doubleValue)))
+                    print(clothes)
+                
+                    
+                    
+
                 }
             }
             self.locationManager.stopUpdatingLocation()
@@ -110,22 +134,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 
 
-    func setBlueGradientBackground(){
-            let topColor = UIColor(red: 95.0/255.0, green: 165.0/255.0, blue: 1.0, alpha: 1.0).cgColor
-            let bottomColor = UIColor(red: 72.0/255.0, green: 114.0/255.0, blue: 184.0/255.0, alpha: 1.0).cgColor
-            gradientLayer.frame = view.bounds
-            gradientLayer.colors = [topColor, bottomColor]
-        }
-    
-    func setGreyGradientBackground(){
-            let topColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
-            let bottomColor = UIColor(red: 72.0/255.0, green: 72.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor
-            gradientLayer.frame = view.bounds
-            gradientLayer.colors = [topColor, bottomColor]
-        }
-    
 
     
     
 }
-
+                    //                    let suffix = iconName.suffix(1)
+                    //                    if(suffix == "n"){
+                    //                        self.setGreyGradientBackground()
+                    //                    }else{
+                    //                        self.setBlueGradientBackground()
+                    //                    }
+                    //    func setBlueGradientBackground(){
+                    //            let topColor = UIColor(red: 95.0/255.0, green: 165.0/255.0, blue: 1.0, alpha: 1.0).cgColor
+                    //            let bottomColor = UIColor(red: 72.0/255.0, green: 114.0/255.0, blue: 184.0/255.0, alpha: 1.0).cgColor
+                    //            gradientLayer.frame = view.bounds
+                    //            gradientLayer.colors = [topColor, bottomColor]
+                    //        }
+                    //
+                    //    func setGreyGradientBackground(){
+                    //            let topColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
+                    //            let bottomColor = UIColor(red: 72.0/255.0, green: 72.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor
+                    //            gradientLayer.frame = view.bounds
+                    //            gradientLayer.colors = [topColor, bottomColor]
+                    //        }
