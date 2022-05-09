@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundEarlyMorning" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-4Z-IRJ">
-                                <rect key="frame" x="-10" y="0.0" width="411" height="844"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="after_noon" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-4Z-IRJ">
+                                <rect key="frame" x="-64" y="0.0" width="475" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHI-5Y-c37">
@@ -128,7 +128,7 @@
     </scenes>
     <resources>
         <image name="Solid_white.svg" width="768" height="768"/>
-        <image name="backgroundEarlyMorning" width="4688" height="10151"/>
+        <image name="after_noon" width="750" height="1334"/>
         <image name="cloudy" width="512" height="512"/>
         <image name="collaredshirt" width="512" height="512"/>
         <image name="jeans" width="512" height="512"/>
