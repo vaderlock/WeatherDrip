@@ -35,7 +35,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        backgroundView.layer.addSublayer(gradientLayer)
@@ -121,8 +120,73 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //                    }
                     
                     let clothes = (Int(round(jsonTemp["temp"].doubleValue)))
-                    print(clothes)
-                
+                    let weatherCondition = jsonWeather["main"].stringValue
+                    
+                    print(clothes) // prints out the temperature status for clothes
+                    print(jsonWeather["main"].stringValue)// prints out the status weather
+                    
+                    switch clothes{
+                        case 10..<40: //temperature ranges
+                            switch weatherCondition{
+                                case "Rain", "Drizzle", "Thunderstorm":
+                                print("") //replace with UI display
+                                case "Snow":
+                                print("")//replace with UI display
+                                default:
+                                print("")//replace with UI display
+                            }
+                        case 40..<50: //temperature ranges
+                            switch weatherCondition{
+                                case "Rain", "Drizzle", "Thunderstorm":
+                                print("") //replace with UI display
+                                case "Snow":
+                                print("")//replace with UI display
+                                default:
+                                print("")//replace with UI display
+                            }
+                        case 50..<60: //temperature ranges
+                            switch weatherCondition{
+                                case "Rain", "Drizzle", "Thunderstorm":
+                                print("It is raining") //replace with UI display
+                                case "Snow":
+                                print("it is snowing")//replace with UI display
+                                default:
+                                print("It works")//replace with UI display
+                            }
+
+                        case 60..<70:
+                            switch weatherCondition{
+                                case "Rain", "Drizzle", "Thunderstorm":
+                                print("")//replace with UI display
+                                case "Snow":
+                                print("")//replace with UI display
+                                default:
+                                print("")//replace with UI display
+                            }
+
+                        case 70..<80:
+                            switch weatherCondition{
+                                    case "Rain", "Drizzle", "Thunderstorm":
+                                    print("")//replace with UI display
+                                    case "Snow":
+                                    print("")//replace with UI display
+                                    default:
+                                    print("")//replace with UI display
+                                }
+                        case 80..<100:
+                            switch weatherCondition{
+                                    case "Rain", "Drizzle", "Thunderstorm":
+                                    print("")//replace with UI display
+                                    case "Snow":
+                                    print("")//replace with UI display
+                                    default:
+                                    print("")//replace with UI display
+                                }
+                        
+                        default:
+                        break;
+                    }
+            
                     
                     
 
@@ -131,13 +195,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
         }
     
+    }
+     
 
 
 
 
-    
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
                     //                    let suffix = iconName.suffix(1)
                     //                    if(suffix == "n"){
                     //                        self.setGreyGradientBackground()
