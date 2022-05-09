@@ -21,8 +21,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
-
-
+    
+    @IBOutlet weak var topClothing: UIImageView!
+    @IBOutlet weak var bottomClothing: UIImageView!
+    @IBOutlet weak var footwearClothing: UIImageView!
+    
+    
+    
+    
+    
     
     let gradientLayer = CAGradientLayer()
     
@@ -160,8 +167,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                 print("")//replace with UI display
                                 case "Snow":
                                 print("")//replace with UI display
+                                case "Clouds":
+                                print("It def works")
+                                self.topClothing.image = UIImage(named: "hoodie" )
+                                self.bottomClothing.image = UIImage(named: "jeans")
+                                self.footwearClothing.image = UIImage(named: "sneakers")
                                 default:
-                                print("")//replace with UI display
+                                self.topClothing.image = UIImage(named: "hoodie" )
+                                self.bottomClothing.image = UIImage(named: "jeans")
+                                self.footwearClothing.image = UIImage(named: "sneakers")
+                                //replace with UI display
+
                             }
 
                         case 70..<80:

@@ -56,6 +56,29 @@
                                 <rect key="frame" x="95" y="130" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Solid_white.svg" translatesAutoresizingMaskIntoConstraints="NO" id="AWH-Fk-zsw">
+                                <rect key="frame" x="-127" y="434" width="645" height="341"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended Outfit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioP-qE-XAE">
+                                <rect key="frame" x="32" y="444" width="175" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="collaredshirt" translatesAutoresizingMaskIntoConstraints="NO" id="CDJ-oF-EaH">
+                                <rect key="frame" x="145" y="472" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jeans" translatesAutoresizingMaskIntoConstraints="NO" id="z1x-x5-1d5">
+                                <rect key="frame" x="145" y="572" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sneakers" translatesAutoresizingMaskIntoConstraints="NO" id="nWQ-kj-h5Z">
+                                <rect key="frame" x="145" y="667" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
@@ -66,12 +89,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomClothing" destination="z1x-x5-1d5" id="Jsx-B4-qlF"/>
                         <outlet property="conditionImageView" destination="vPs-4z-l6Q" id="c0q-kQ-pfd"/>
                         <outlet property="conditionLabel" destination="e5N-20-Ruo" id="VNt-24-Ch0"/>
                         <outlet property="dayLabel" destination="0th-qW-KPS" id="3Fq-me-MnS"/>
+                        <outlet property="footwearClothing" destination="nWQ-kj-h5Z" id="ZuS-b5-570"/>
                         <outlet property="locationLabel" destination="BHI-5Y-c37" id="hTn-VP-uGI"/>
                         <outlet property="mainScreenBackground" destination="uJf-4Z-IRJ" id="vw8-0B-TZo"/>
                         <outlet property="temperatureLabel" destination="2XJ-B3-nfW" id="987-kU-IXJ"/>
+                        <outlet property="topClothing" destination="CDJ-oF-EaH" id="IpF-Sp-awD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,7 +106,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Solid_white.svg" width="768" height="768"/>
         <image name="backgroundEarlyMorning" width="4688" height="10151"/>
         <image name="cloudy" width="512" height="512"/>
+        <image name="collaredshirt" width="512" height="512"/>
+        <image name="jeans" width="512" height="512"/>
+        <image name="sneakers" width="339" height="223"/>
     </resources>
 </document>
